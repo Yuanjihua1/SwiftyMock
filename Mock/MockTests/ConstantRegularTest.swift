@@ -34,7 +34,9 @@ class ConstantRegularTest: XCTestCase {
     }
     
     func testKey(){
-        
+        let res = "age|1" =~ ConstantRegular.key.rawValue
+        print(res)
+        XCTAssert(res)
     }
     
 }
