@@ -1,5 +1,5 @@
 //
-//  MockTests.swift
+//  ConstantRegular.swift
 //  MockTests
 //
 //  Created by ZhangJing on 2018/3/30.
@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import Mock
+import Regex
 
-class MockTests: XCTestCase {
+class ConstantRegularTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -33,6 +33,8 @@ class MockTests: XCTestCase {
         }
     }
     
-   
+    func testKey(){
+        
+    }
     
 }
