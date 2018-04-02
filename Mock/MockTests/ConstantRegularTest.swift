@@ -55,7 +55,10 @@ class ConstantRegularTest: XCTestCase {
         }else{
             XCTAssert(false, "正则匹配失败")
         }
-        
+    }
+    
+    func testPlaceholder(){
+        if let res = Constant.REGULAR_PLACEHOLDER.r?.findFirst(in: "name|")
     }
     
 }
