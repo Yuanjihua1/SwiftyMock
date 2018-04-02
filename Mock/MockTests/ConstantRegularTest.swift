@@ -34,9 +34,28 @@ class ConstantRegularTest: XCTestCase {
     }
     
     func testKey(){
-        let res = "age|1" =~ ConstantRegular.key.rawValue
-        print(res)
-        XCTAssert(res)
+        if let res = Constant.REGULAR_KEY.r?.findFirst(in: "name|1-10:xiuye")?.group(at: 1) {
+            print(res)
+            XCTAssertEqual(res, "name")
+        }else{
+            XCTAssert(false, "正则匹配失败")
+        }
+    }
+    
+    func testRange(){
+        if let res = Constant.REGULAR_RANGE.r?.findFirst(in: "name|1-10:xiuye")?.subgroups{
+            let ranges = res.flatMap{
+                Int($0!)
+            }
+            guard let min = ranges.min() else {return}
+            guard let max = ranges.max() else {return}
+            print(min,max)
+            XCTAssertEqual([min,max], [1,10])
+            XCTAssertLessThan(min, max)
+        }else{
+            XCTAssert(false, "正则匹配失败")
+        }
+        
     }
     
 }

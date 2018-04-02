@@ -1,5 +1,5 @@
 //
-//  Handler.swift
+//  util.swift
 //  Mock
 //
 //  Created by ZhangJing on 2018/4/2.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-final class Handler {
-    var name = ""
-    func gen(template:String,name:String,context:String){
-        self.name = name
+final class Util {
+    func each<T:SignedNumeric,U:IteratorProtocol>(obj:T,iterator:U,context:Any){
         
     }
+    
+    
 }
