@@ -1,15 +1,14 @@
 //
-//  MockTests.swift
+//  Random.swift
 //  MockTests
 //
-//  Created by ZhangJing on 2018/3/30.
+//  Created by 李修冶 on 2018/4/3.
 //  Copyright © 2018年 xiuye. All rights reserved.
 //
 
 import XCTest
-@testable import Mock
 
-class MockTests: XCTestCase {
+class Random: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -33,12 +32,13 @@ class MockTests: XCTestCase {
         }
     }
     
-    func testMock(){
-        let mock = Mock.init(template: [
-            "name":"xiuye ",
-            "age|1-10":0
-            ])
-        print(mock.json)
+    func testRandomInt(){
+        for _ in 0...10000{
+            let some = Int.random(in: 1...100)
+            print(some)
+            XCTAssertLessThanOrEqual(some, 100)
+            XCTAssertGreaterThanOrEqual(some, 1)
+        }
     }
     
 }

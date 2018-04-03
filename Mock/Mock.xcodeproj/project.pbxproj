@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0E2EB6C6CA5309859252755B /* Pods_MockTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7037B81C8C354CB536C6A659 /* Pods_MockTests.framework */; };
+		2213D0562073BB1200085DE5 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213D0552073BB1200085DE5 /* Random.swift */; };
+		2213D0572073BB1200085DE5 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213D0552073BB1200085DE5 /* Random.swift */; };
+		2213D0582073BB1200085DE5 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213D0552073BB1200085DE5 /* Random.swift */; };
+		2213D05A2073D4E800085DE5 /* RandomTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213D0592073D4E800085DE5 /* RandomTest.swift */; };
+		2213D05C2073D97A00085DE5 /* MockLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213D05B2073D97A00085DE5 /* MockLog.swift */; };
+		2213D05D2073D97A00085DE5 /* MockLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213D05B2073D97A00085DE5 /* MockLog.swift */; };
+		2213D05E2073D97A00085DE5 /* MockLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213D05B2073D97A00085DE5 /* MockLog.swift */; };
 		3F6B5366C63325B77C1B1191 /* Pods_MockUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138F374F0657349D8FACF9B4 /* Pods_MockUITests.framework */; };
 		5A8315758B91BA233E12F69B /* Pods_Mock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBEAA97AAE3BD6956436F57 /* Pods_Mock.framework */; };
 		6160385C206E35D1000C2F59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6160385B206E35D1000C2F59 /* AppDelegate.swift */; };
@@ -47,6 +54,9 @@
 
 /* Begin PBXFileReference section */
 		138F374F0657349D8FACF9B4 /* Pods_MockUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MockUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2213D0552073BB1200085DE5 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		2213D0592073D4E800085DE5 /* RandomTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomTest.swift; sourceTree = "<group>"; };
+		2213D05B2073D97A00085DE5 /* MockLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLog.swift; sourceTree = "<group>"; };
 		3CBEAA97AAE3BD6956436F57 /* Pods_Mock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4017BBFDFEE631552EE88C91 /* Pods-MockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MockTests/Pods-MockTests.release.xcconfig"; sourceTree = "<group>"; };
 		61603858206E35D1000C2F59 /* Mock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mock.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				61603870206E35D1000C2F59 /* MockTests.swift */,
+				2213D0592073D4E800085DE5 /* RandomTest.swift */,
 				61603872206E35D1000C2F59 /* Info.plist */,
 			);
 			path = MockTests;
@@ -172,8 +183,10 @@
 			isa = PBXGroup;
 			children = (
 				618461F320736955006F1001 /* Mock.swift */,
+				2213D0552073BB1200085DE5 /* Random.swift */,
 				618461F720736D5B006F1001 /* Parser.swift */,
 				618461FB20736DAA006F1001 /* RegularExpression.swift */,
+				2213D05B2073D97A00085DE5 /* MockLog.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -471,7 +484,9 @@
 			files = (
 				618461F820736D5B006F1001 /* Parser.swift in Sources */,
 				6160385E206E35D1000C2F59 /* ViewController.swift in Sources */,
+				2213D0562073BB1200085DE5 /* Random.swift in Sources */,
 				6160385C206E35D1000C2F59 /* AppDelegate.swift in Sources */,
+				2213D05C2073D97A00085DE5 /* MockLog.swift in Sources */,
 				618461FC20736DAA006F1001 /* RegularExpression.swift in Sources */,
 				618461F420736955006F1001 /* Mock.swift in Sources */,
 			);
@@ -483,6 +498,9 @@
 			files = (
 				61603871206E35D1000C2F59 /* MockTests.swift in Sources */,
 				618461F520736955006F1001 /* Mock.swift in Sources */,
+				2213D05A2073D4E800085DE5 /* RandomTest.swift in Sources */,
+				2213D0572073BB1200085DE5 /* Random.swift in Sources */,
+				2213D05D2073D97A00085DE5 /* MockLog.swift in Sources */,
 				618461F920736D5B006F1001 /* Parser.swift in Sources */,
 				618461FD20736DAA006F1001 /* RegularExpression.swift in Sources */,
 			);
@@ -494,7 +512,9 @@
 			files = (
 				6160387C206E35D1000C2F59 /* MockUITests.swift in Sources */,
 				618461F620736955006F1001 /* Mock.swift in Sources */,
+				2213D0582073BB1200085DE5 /* Random.swift in Sources */,
 				618461FA20736D5B006F1001 /* Parser.swift in Sources */,
+				2213D05E2073D97A00085DE5 /* MockLog.swift in Sources */,
 				618461FE20736DAA006F1001 /* RegularExpression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

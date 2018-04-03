@@ -15,7 +15,7 @@ class Parser {
     func parse(key : String){
         guard let result = RegularExpression.KEY.r?.findFirst(in: key)else{ return }
         
-        print(result.subgroups)
+        MockLog(key)
         self.key = result.group(at: 1)
         guard let rangeStr = result.group(at: 3) else {
             fatalError("没有匹配到key")

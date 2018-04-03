@@ -11,18 +11,22 @@ import Foundation
 class Mock {
     init(template: [String:Any]) {
         handler(template)
-        
     }
     var json = [String:Any]()
     
     func handler(_ template:String,parser: Parser){
         if let range = parser.range{
+            json[parser.key] = template * Int.random(in: range)
+        }else{
             json[parser.key] = template
         }
+        
     }
     
-    func handler(_ template:Int){
-        
+    func handler(_ template:Int,parser:Parser){
+        if let range = parser.range{
+            json[parser.key] = Int.random(in: range)
+        }
     }
     
     func handler(_ template:[String:Any]){
@@ -31,13 +35,13 @@ class Mock {
             parser.parse(key: key)
             switch value {
             case let someInt as Int:
-                print(someInt)
+                handler(someInt, parser: parser)
             case let someStr as String:
-                print(someStr)
+                handler(someStr, parser: parser)
             case let someDic as [String:Any]:
                 handler(someDic)
             case let someArr as [Any]:
-                print(someArr)
+                MockLog(someArr)
             default:
                 fatalError("类型不匹配")
             }
