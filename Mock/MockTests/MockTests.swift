@@ -33,6 +33,12 @@ class MockTests: XCTestCase {
         }
     }
     
-   
+    func testMock(){
+        let mock = Mock.init(template: [
+            "name":"@cname()",
+            "age|1-10":0
+            ])
+        print(mock.json)
+    }
     
 }

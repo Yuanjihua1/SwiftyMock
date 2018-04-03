@@ -1,0 +1,46 @@
+//
+//  Mock.swift
+//  Mock
+//
+//  Created by ZhangJing on 2018/4/3.
+//  Copyright © 2018年 xiuye. All rights reserved.
+//
+
+import Foundation
+
+class Mock {
+    init(template: [String:Any]) {
+        handler(template)
+        
+    }
+    var json = [String:Any]()
+    
+    func handler(_ template:String,parser: Parser){
+        if let range = parser.range{
+            json[parser.key] = template
+        }
+    }
+    
+    func handler(_ template:Int){
+        
+    }
+    
+    func handler(_ template:[String:Any]){
+        for (key,value) in template{
+            let parser = Parser()
+            parser.parse(key: key)
+            switch value {
+            case let someInt as Int:
+                print(someInt)
+            case let someStr as String:
+                print(someStr)
+            case let someDic as [String:Any]:
+                handler(someDic)
+            case let someArr as [Any]:
+                print(someArr)
+            default:
+                fatalError("类型不匹配")
+            }
+        }
+    }
+}
