@@ -33,6 +33,7 @@
 		618461FC20736DAA006F1001 /* RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618461FB20736DAA006F1001 /* RegularExpression.swift */; };
 		618461FD20736DAA006F1001 /* RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618461FB20736DAA006F1001 /* RegularExpression.swift */; };
 		618461FE20736DAA006F1001 /* RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618461FB20736DAA006F1001 /* RegularExpression.swift */; };
+		619456D42074649B00F609C2 /* RegularExpressTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619456D32074649B00F609C2 /* RegularExpressTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		618461F320736955006F1001 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 		618461F720736D5B006F1001 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		618461FB20736DAA006F1001 /* RegularExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpression.swift; sourceTree = "<group>"; };
+		619456D32074649B00F609C2 /* RegularExpressTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressTest.swift; sourceTree = "<group>"; };
 		69EC325D474ECCCEC0F62938 /* Pods-Mock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mock.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mock/Pods-Mock.release.xcconfig"; sourceTree = "<group>"; };
 		7037B81C8C354CB536C6A659 /* Pods_MockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91EDA8B9276686CD1B27BC68 /* Pods-MockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MockUITests/Pods-MockUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				61603870206E35D1000C2F59 /* MockTests.swift */,
 				2213D0592073D4E800085DE5 /* RandomTest.swift */,
 				61603872206E35D1000C2F59 /* Info.plist */,
+				619456D32074649B00F609C2 /* RegularExpressTest.swift */,
 			);
 			path = MockTests;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				2213D05D2073D97A00085DE5 /* MockLog.swift in Sources */,
 				618461F920736D5B006F1001 /* Parser.swift in Sources */,
 				618461FD20736DAA006F1001 /* RegularExpression.swift in Sources */,
+				619456D42074649B00F609C2 /* RegularExpressTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

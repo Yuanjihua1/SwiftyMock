@@ -11,9 +11,14 @@ import Regex
 
 class Parser {
     var key:String!
-    var range : CountableClosedRange<Int>!
+    var range : CountableClosedRange<Int>?
+    var count : Int?
+    
     func parse(key : String){
-        guard let result = RegularExpression.KEY.r?.findFirst(in: key)else{ return }
+        guard let result = RegularExpression.KEY.r?.findFirst(in: key)else{
+            self.key = key
+            return
+        }
         
         MockLog(key)
         self.key = result.group(at: 1)
@@ -23,10 +28,19 @@ class Parser {
         guard let rangeRes = RegularExpression.RANGE.r?.findFirst(in: rangeStr) else {
             fatalError("没有匹配到范围")
         }
-        let arr = rangeRes.subgroups.flatMap({Int($0!)})
-        let min = arr.min()!
-        let max = arr.max()!
-        self.range = min...max
+        let arr = rangeRes.subgroups.flatMap{ str  -> Int? in
+            if let numStr = str {
+                return Int(numStr)
+            }else{
+                return nil
+            }
+        }
+        if let count = arr.first, arr.count == 1 {
+            self.count = count
+        }else if let min = arr.min() ,let max = arr.max(){
+            self.range = min...max
+        }
+        
     }
     
 }

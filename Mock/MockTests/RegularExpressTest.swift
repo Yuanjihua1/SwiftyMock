@@ -1,15 +1,14 @@
 //
-//  MockTests.swift
+//  RegularExpressTest.swift
 //  MockTests
 //
-//  Created by ZhangJing on 2018/3/30.
+//  Created by ZhangJing on 2018/4/4.
 //  Copyright © 2018年 xiuye. All rights reserved.
 //
 
 import XCTest
-@testable import Mock
 
-class MockTests: XCTestCase {
+class RegularExpressTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -33,13 +32,18 @@ class MockTests: XCTestCase {
         }
     }
     
-    func testMock(){
-        for _ in 0..<10{
-            let mock = Mock.init(template: [
-                "name|2":"xiuye ",
-                "age|1-10":0
-                ])
-            print(mock.json)
+    func testKey(){
+        if let result = RegularExpression.KEY.r?.findFirst(in: "name:xiuye")?.subgroups{
+            MockLog(result)
+        }else{
+            XCTAssert(false)
+        }
+    }
+    
+    func testRegular(){
+        if let result = RegularExpression.RANGE.r?.findFirst(in: "name|+1:1")?.subgroups{
+            MockLog(result)
+            MockLog(Int("-1"))
         }
     }
     

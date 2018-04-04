@@ -11,10 +11,11 @@ import Foundation
 
 public func *(_ left:String,_ right:Int) -> String{
     var str = left
+    var sum = ""
     for _ in 0..<right{
-        str += str
+        sum += str
     }
-    return str
+    return sum
 }
 
 extension Int{
