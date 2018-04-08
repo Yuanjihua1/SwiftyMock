@@ -12,6 +12,7 @@ class Mock {
     init(template: [String:Any]) {
         handler(template)
     }
+    
     var json = [String:Any]()
     
     func handler(_ template:String,parser: Parser){
@@ -52,4 +53,5 @@ class Mock {
             }
         }
     }
+    
 }

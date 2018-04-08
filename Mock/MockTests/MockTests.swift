@@ -36,7 +36,7 @@ class MockTests: XCTestCase {
     func testMock(){
         for _ in 0..<10{
             let mock = Mock.init(template: [
-                "name|2":"xiuye ",
+                "name|1-12":"xiuye ",
                 "age|1-10":0
                 ])
             print(mock.json)

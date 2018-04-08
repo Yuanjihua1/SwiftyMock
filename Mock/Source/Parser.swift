@@ -40,7 +40,11 @@ class Parser {
         }else if let min = arr.min() ,let max = arr.max(){
             self.range = min...max
         }
+    }
+    
+    func parse(template: String) -> String{
         
+        return template
     }
     
 }
