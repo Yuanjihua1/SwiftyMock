@@ -48,9 +48,14 @@ class RegularExpressTest: XCTestCase {
     }
     
     func testPlachholder(){
-        if let matchsIterator = RegularExpression.PLACEHOLDER.r?.replaceAll(in: "name:@first(li,1)@last(xiuye,2)", using: { (match) -> String? in
-            print(match.subgroups)
-            return "1,2"
+        if let matchsIterator = RegularExpression.PLACEHOLDER.r?.replaceAll(in: "name:@first()@last()", using: { (match) -> String? in
+            guard let funcStr = match.subgroups.first! else {return ""}
+            
+            let funmap = FuncMap.init()
+            let result = funmap.perform(Selector(funcStr))
+            let str = result?.takeUnretainedValue() as! String
+            
+            return str
         }){
             MockLog(matchsIterator)
         }
