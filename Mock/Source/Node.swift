@@ -9,20 +9,19 @@
 import Foundation
 
 public indirect enum Node{
-    case int(Int)
+    case number(NSNumber)
     case string(String)
-    case list(Array<Node>)
+    case list([Node])
     case object([String:Node])
 }
 
 extension Node{
-    
     static func create(by value:Any) -> Node{
         switch value {
-        case let some as Int:
-            return Node.int(some)
         case let some as String:
             return Node.string(some)
+        case let some as NSNumber:
+            return Node.number(some)
         case let some as [Any]:
             var arr = [Node]()
             for item in some {
@@ -36,7 +35,7 @@ extension Node{
             }
             return Node.object(dic)
         default:
-            return Node.string("no node")
+            return Node.string("this type not json")
         }
     }
     
@@ -56,8 +55,18 @@ extension Node{
             return arr
         case .string(let some):
             return some
-        case .int(let some):
+        case .number(let some):
             return some
+        }
+    }
+}
+
+extension Dictionary {
+    var json : Any? {
+        get{
+            let data = try! JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+            let json = try! JSONSerialization.jsonObject(with: data, options: .allowFragments)
+            return json
         }
     }
 }

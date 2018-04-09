@@ -10,10 +10,9 @@ import Foundation
 
 
 public func *(_ left:String,_ right:Int) -> String{
-    var str = left
     var sum = ""
     for _ in 0..<right{
-        sum += str
+        sum += left
     }
     return sum
 }
