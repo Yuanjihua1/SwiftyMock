@@ -33,7 +33,7 @@ class RuleTest: XCTestCase {
     }
     
     func testRule(){
-        let r = Rule.getRule(from: "name")
+        
     }
     
 }

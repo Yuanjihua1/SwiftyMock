@@ -44,7 +44,11 @@ extension Node{
         case .object(let dic):
             var json = [String:Any]()
             for (key,value) in dic {
-                json[key] = value.parsed()
+                if let rule = Rule.create(from: key){
+                    json[rule.key] = rule.parse(node: value).parsed()
+                }else{
+                    json[key] = value.parsed()
+                }
             }
             return json
         case .list(let some):

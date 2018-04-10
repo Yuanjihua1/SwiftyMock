@@ -19,6 +19,6 @@ public func *(_ left:String,_ right:Int) -> String{
 
 extension Int{
     static func random(in range: CountableClosedRange<Int>) -> Int {
-        return Int(arc4random_uniform(UInt32(range.upperBound))) + range.lowerBound
+        return Int(arc4random_uniform(UInt32(range.upperBound - range.lowerBound + 1))) + range.lowerBound
     }
 }

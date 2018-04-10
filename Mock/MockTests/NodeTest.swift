@@ -34,14 +34,12 @@ class NodeTest: XCTestCase {
 
     func testNode(){
         
-        let stu1 = ["name":"小红","age":21,"no":"1","height":168.1] as [String : Any]
-        let stu2 = ["name":"小黄","age":22,"no":"2","height":167.3] as [String : Any]
-        let stu3 = ["name":"小蓝","age":23,"no":"3","height":192.5] as [String : Any]
+        let stu1 = ["name|1-3":"小红","age|10-30":21,"no":"1","height":168.1] as [String : Any]
         
-        let teacher = ["name":"小白","age":50,"height":188.3,"students":[stu1,stu2,stu3]] as [String : Any]
+        let teacher = ["name":"小白","age|30-50":50,"height":188.3,"students|1-10":[stu1]] as [String : Any]
         
         let node = Node.create(by: teacher)
-        print(node.parsed() )
+        print(node.parsed())
     }
     
 }

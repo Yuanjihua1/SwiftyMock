@@ -34,10 +34,21 @@ class Random: XCTestCase {
     
     func testRandomInt(){
         for _ in 0...10000{
-            let some = Int.random(in: 1...100)
-            print(some)
-            XCTAssertLessThanOrEqual(some, 100)
-            XCTAssertGreaterThanOrEqual(some, 1)
+            let some = Int.random(in: 10...30)
+           
+            if some == 30{
+                print(some)
+            }
+            XCTAssertLessThanOrEqual(some, 30)
+            XCTAssertGreaterThanOrEqual(some, 10)
+        }
+    }
+    
+    func testRange(){
+        for _ in 0...10{
+        let some = Int.random(in: 1...3)
+        let str = "a" * some
+        print(str)
         }
     }
     
