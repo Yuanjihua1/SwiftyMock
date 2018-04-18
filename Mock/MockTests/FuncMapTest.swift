@@ -1,14 +1,14 @@
 //
-//  NodeTest.swift
+//  FuncMapTest.swift
 //  MockTests
 //
-//  Created by ZhangJing on 2018/4/9.
+//  Created by ZhangJing on 2018/4/18.
 //  Copyright © 2018年 xiuye. All rights reserved.
 //
 
 import XCTest
 
-class NodeTest: XCTestCase {
+class FuncMapTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -23,6 +23,10 @@ class NodeTest: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let fm : FuncMapper = SubMaper()
+        let result = fm.parsed(template: "姓:@first(1) 名:@last()")
+        print(result)
     }
     
     func testPerformanceExample() {
@@ -31,22 +35,7 @@ class NodeTest: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
-    func testNode(){
-        
-        let stu1 = ["name|1-3":"小红","age|10-30":21,"no":"1","height":168.1] as [String : Any]
-        
-        let teacher = ["name":"小白","age|30-50":50,"height":188.3,"students|1-10":[stu1]] as [String : Any]
-        
-        let node = Node.create(by: teacher)
-        if let dic = node.parsed() as? [String:Any]{
-            print("teacher:",dic["age"])
-            if let arr = dic["students"] as? [[String:Any]]{
-                for item in arr{
-                    print("student:",item["age"])
-                }
-            }
-        }
-    }
+    
+    
     
 }

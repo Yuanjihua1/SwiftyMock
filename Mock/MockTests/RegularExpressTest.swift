@@ -51,7 +51,7 @@ class RegularExpressTest: XCTestCase {
         if let matchsIterator = RegularExpression.PLACEHOLDER.r?.replaceAll(in: "name:@first()@last()", using: { (match) -> String? in
             guard let funcStr = match.subgroups.first! else {return ""}
             
-            let funmap = FuncMap.init()
+            let funmap = FuncMapper.init()
             let result = funmap.perform(Selector(funcStr))
             let str = result?.takeUnretainedValue() as! String
             

@@ -39,7 +39,7 @@ extension Node{
         }
     }
     
-    func parsed() -> Any{
+    func parsed(_ obj:FuncMapper = FuncMapper()) -> Any{
         switch self {
         case .object(let dic):
             var json = [String:Any]()
@@ -58,6 +58,7 @@ extension Node{
             }
             return arr
         case .string(let some):
+            
             return some
         case .number(let some):
             return some
