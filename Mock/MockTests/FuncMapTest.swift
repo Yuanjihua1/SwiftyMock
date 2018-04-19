@@ -24,8 +24,8 @@ class FuncMapTest: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        let fm : FuncMapper = SubMaper()
-        let result = fm.parsed(template: "姓:@first(1) 名:@last()")
+        let fm : FuncMapper = FuncMapper()
+        let result = fm.parsed(template: "姓:@first() 名:@last()")
         print(result)
     }
     
