@@ -58,8 +58,7 @@ extension Node{
             }
             return arr
         case .string(let some):
-            
-            return some
+            return obj.parsed(template: some)
         case .number(let some):
             return some
         }

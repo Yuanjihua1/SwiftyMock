@@ -36,6 +36,9 @@ class FuncMapTest: XCTestCase {
         }
     }
     
-    
+    func testCurrent(){
+        let a = FuncMapper().currentDate()
+        print(a)
+    }
     
 }

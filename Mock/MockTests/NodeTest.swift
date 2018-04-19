@@ -34,12 +34,13 @@ class NodeTest: XCTestCase {
 
     func testNode(){
         
-        let stu1 = ["name|1-3":"小红","age|10-30":21,"no":"1","height":168.1] as [String : Any]
+        let stu1 = ["name":"@cname()","age|10-30":21,"no":"1","height":168.1] as [String : Any]
         
-        let teacher = ["name":"小白","age|30-50":50,"height":188.3,"students|1-10":[stu1]] as [String : Any]
+        let teacher = ["name":"@cname()","age|30-50":50,"height":188.3,"students|1-10":[stu1]] as [String : Any]
         
         let node = Node.create(by: teacher)
         if let dic = node.parsed() as? [String:Any]{
+            print(dic)
             print("teacher:",dic["age"])
             if let arr = dic["students"] as? [[String:Any]]{
                 for item in arr{

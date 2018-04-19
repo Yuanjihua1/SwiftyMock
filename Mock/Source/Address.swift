@@ -10,9 +10,9 @@ import Foundation
 
 class Address {
     
-    func province() -> [String:String]{
-        
-    }
+//    func province() -> [String:String]{
+//        
+//    }
     
     var DICT = [
         "110000": "北京",

@@ -22,3 +22,9 @@ extension Int{
         return Int(arc4random_uniform(UInt32(range.upperBound - range.lowerBound + 1))) + range.lowerBound
     }
 }
+
+extension Array {
+    var randomElement : Element{
+        return self[Int.random(in: 0...self.count-1)]
+    }
+}
