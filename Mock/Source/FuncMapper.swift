@@ -27,7 +27,7 @@ class FuncMapper: NSObject {
                     }
                     
                     if arr.count == 2{
-                        return self.perform(Selector(selStr+":"), with: arr[0], with: arr[1]).takeUnretainedValue() as? String
+                        return self.perform(Selector(selStr+"::"), with: arr[0], with: arr[1]).takeUnretainedValue() as? String
                     }
                 }
             }
@@ -96,6 +96,29 @@ class FuncMapper: NSObject {
         formatter.dateFormat = dateFormat
         return formatter.string(from: Date())
     }
+    
+    @objc func datetime(_ dateFormat: String = "yyyy-MM-dd hh:mm:ss")->String{
+        let randomTime = TimeInterval(arc4random_uniform(UInt32.max))
+        let date = Date(timeIntervalSince1970: randomTime)
+        let formatter = DateFormatter.init()
+        formatter.dateFormat = dateFormat
+        return formatter.string(from: date)
+    }
+    
+    @objc func date(_ dateFormat: String = "yyyy-MM-dd") -> String{
+        return datetime(dateFormat)
+    }
+    
+    @objc func time(_ dateFormat: String = "hh:mm:ss") -> String{
+        return time(dateFormat)
+    }
+    
+    @objc func imageUrl(_ width: String,_ height: String) -> String{
+        return "http://lorempixel.com/\(width)/\(height)/"
+    }
+    
+     
+    
 }
 
 

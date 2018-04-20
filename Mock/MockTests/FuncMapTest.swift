@@ -41,4 +41,16 @@ class FuncMapTest: XCTestCase {
         print(a)
     }
     
+    func testDateTime(){
+        let fm = FuncMapper().datetime()
+        print(fm)
+    }
+    
+    func testImage(){
+//        let fm = FuncMapper().imageUrl(80,80)
+//        print(fm)http://lorempixel.com/80/80/
+        let node = Node.string("@imageUrl(100,80)")
+        print(node.parsed())
+    }
+    
 }
