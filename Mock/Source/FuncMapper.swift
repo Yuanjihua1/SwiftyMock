@@ -117,7 +117,7 @@ class FuncMapper: NSObject {
         return "http://lorempixel.com/\(width)/\(height)/"
     }
     
-     
+    
     
 }
 

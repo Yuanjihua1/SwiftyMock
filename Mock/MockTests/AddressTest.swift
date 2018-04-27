@@ -1,14 +1,14 @@
 //
-//  FuncMapTest.swift
+//  AddressTest.swift
 //  MockTests
 //
-//  Created by ZhangJing on 2018/4/18.
+//  Created by ZhangJing on 2018/4/27.
 //  Copyright © 2018年 xiuye. All rights reserved.
 //
 
 import XCTest
 
-class FuncMapTest: XCTestCase {
+class AddressTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -23,10 +23,8 @@ class FuncMapTest: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        let fm : FuncMapper = FuncMapper()
-        let result = fm.parsed(template: "姓:@first() 名:@last()")
-        print(result)
+        var a = Address.init()
+        a.load()
     }
     
     func testPerformanceExample() {
@@ -34,24 +32,6 @@ class FuncMapTest: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
-    }
-    
-    func testCurrent(){
-        let a = FuncMapper().currentDate()
-        print(a)
-    }
-    
-    func testDateTime(){
-        let fm = FuncMapper().datetime()
-        print(fm)
-    }
-    
-    func testImage(){
-//        let fm = FuncMapper().imageUrl(80,80)
-//        print(fm)http://lorempixel.com/80/80/
-        let node = Node.string("@imageUrl(100,80)")
-        print(node.parsed())
-        
     }
     
 }
