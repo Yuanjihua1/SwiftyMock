@@ -24,12 +24,22 @@ struct Address{
         return returnArr
     }
     
-    func cities(in provices : String) -> [String]{
+    static func cities(in provices : String) -> [String]{
         var returnValue : [String] = []
         
-        
+        for item in json as! [[String:Any]]{
+            if let cityName = item["name"] as? String, cityName == provices{
+                for child in item["children"] as! [[String:Any]]{
+                    returnValue.append( child["name"] as! String)
+                }
+            }
+        }
         
         return returnValue
     }
     
+    
+    static func counties(){
+        
+    }
 }
