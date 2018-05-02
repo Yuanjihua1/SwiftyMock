@@ -38,8 +38,26 @@ struct Address{
         return returnValue
     }
     
-    
-    static func counties(){
+    static func counties(in city: String) -> [String]{
+        var returnValue : [String] = []
         
+        for item in json as! [[String:Any]]{
+            
+                for provchild in item["children"] as! [[String:Any]]{
+                    
+                    if let childCity = provchild["name"] as? String, childCity == city{
+                        if let cityNode = provchild["children"] as? [[String:Any]]{
+                            for childitem in cityNode{
+                                returnValue.append(childitem["name"] as! String)
+                            }
+                        }else{
+                            returnValue.append("")
+                        }
+                    }
+                }
+            
+        }
+
+        return returnValue
     }
 }

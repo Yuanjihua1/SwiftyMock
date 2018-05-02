@@ -117,7 +117,17 @@ class FuncMapper: NSObject {
         return "http://lorempixel.com/\(width)/\(height)/"
     }
     
-    
+    @objc func address() -> String{
+        var returnValue = ""
+        
+        let prov = Address.provinces.randomElement
+        let city = Address.cities(in: prov).randomElement
+        let count = Address.counties(in: city).randomElement
+        
+        returnValue = "\(prov) \(city) \(count)"
+        
+        return returnValue
+    }
     
 }
 
