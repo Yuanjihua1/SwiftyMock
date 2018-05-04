@@ -16,7 +16,6 @@ class Mock {
     var json = [String:Any]()
     
     func handler(_ template:String,parser: Parser){
-        MockLog(parser.count,parser.range)
         if let range = parser.range{
             json[parser.key] = template * Int.random(in: range)
         }else if let count = parser.count{

@@ -51,8 +51,6 @@
 		61C5CF0D20930092008420C4 /* AddressTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C5CF0C20930091008420C4 /* AddressTest.swift */; };
 		61C5CF0E209300DB008420C4 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6188E1B220886EEF00733C66 /* Address.swift */; };
 		61C5CF0F209300E9008420C4 /* Address+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617890492091BCD800D674BF /* Address+Extension.swift */; };
-		61C5CF12209303F5008420C4 /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = 61C5CF11209303E9008420C4 /* area.json */; };
-		61C5CF13209303F5008420C4 /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = 61C5CF11209303E9008420C4 /* area.json */; };
 		61C5CF1520930D61008420C4 /* address.json in Resources */ = {isa = PBXBuildFile; fileRef = 61C5CF1420930D61008420C4 /* address.json */; };
 /* End PBXBuildFile section */
 
@@ -106,7 +104,6 @@
 		61984ABB207B730E00D65C55 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		61984ABF207B7A8B00D65C55 /* RuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTest.swift; sourceTree = "<group>"; };
 		61C5CF0C20930091008420C4 /* AddressTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTest.swift; sourceTree = "<group>"; };
-		61C5CF11209303E9008420C4 /* area.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = area.json; path = MockTests/area.json; sourceTree = SOURCE_ROOT; };
 		61C5CF1420930D61008420C4 /* address.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = address.json; sourceTree = "<group>"; };
 		69EC325D474ECCCEC0F62938 /* Pods-Mock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mock.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mock/Pods-Mock.release.xcconfig"; sourceTree = "<group>"; };
 		7037B81C8C354CB536C6A659 /* Pods_MockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,7 +217,6 @@
 		61603889206E3980000C2F59 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				61C5CF11209303E9008420C4 /* area.json */,
 				61C5CF1420930D61008420C4 /* address.json */,
 				618461F320736955006F1001 /* Mock.swift */,
 				61984AB5207B4C9500D65C55 /* Node.swift */,
@@ -365,7 +361,6 @@
 				61603866206E35D1000C2F59 /* LaunchScreen.storyboard in Resources */,
 				61C5CF1520930D61008420C4 /* address.json in Resources */,
 				61603863206E35D1000C2F59 /* Assets.xcassets in Resources */,
-				61C5CF12209303F5008420C4 /* area.json in Resources */,
 				61603861206E35D1000C2F59 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +369,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61C5CF13209303F5008420C4 /* area.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
