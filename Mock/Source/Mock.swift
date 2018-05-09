@@ -9,6 +9,7 @@
 import Foundation
 
 class Mock {
+    
     init(template: [String:Any]) {
         handler(template)
     }
