@@ -1,0 +1,13 @@
+{
+    "name":"@cname()",
+    "age|10-20":0,
+    "address":"@address()",
+    "mark":"@ctext(5,50)",
+    "students|1-10":[ {
+        "name":"@cname()",
+        "age|30-50":0,
+        "address":"@address()",
+        "mark":"@ctext(5,50)",
+        "avatar": "@imageUrl(80,80)"
+    } ]
+}
