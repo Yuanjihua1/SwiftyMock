@@ -10,8 +10,8 @@ import Foundation
 
 struct Address{
     static var json : Any {
-        let bundle = Bundle.init(path: Bundle.main.path(forResource: "Address", ofType: "bundle")!)
-        guard let url = bundle?.url(forResource: "address", withExtension: "json") else { fatalError() }
+        let bundle = Bundle.init(for: FuncMapper.classForCoder())
+        guard let url = bundle.url(forResource: "address", withExtension: "json") else { fatalError() }
         let data = try! Data.init(contentsOf: url)
         let json = try! JSONSerialization.jsonObject(with: data, options: .allowFragments)
         return json
