@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = 'SwiftyMockJSON'
-s.version = '1.0'
+s.version = '1.0.1'
 s.license = 'MIT'
 s.summary = 'SwiftyMockJSON'
 s.homepage = 'https://github.com/Yuanjihua1/SwiftyMock'
